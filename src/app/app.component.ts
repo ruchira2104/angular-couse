@@ -10,4 +10,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-couse';
+  onTitleClick =() => {
+    alert("Ruchira")
+  }
+
+  onKeyUp = (newTitle:string) => {
+    this.title = newTitle;
+  }
 }
