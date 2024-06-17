@@ -15,12 +15,14 @@
   </ng-template> -->
 
   <!-- using @if syntax -->
-  @if(course.iconUrl){
+  <!-- @if(course.iconUrl){
   <img width="300" alt="Angular Logo" [src]="course.iconUrl" />
   } @else(){
   <p #noImage>No image</p>
-  }
+  } -->
 
+  <!-- <ng-content select="img"/> -->
+  <ng-content select=".imageClass"/>
   <div class="course-description">
     {{ course.longDescription }}
   </div>
