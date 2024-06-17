@@ -13,7 +13,7 @@
   <!-- similary we have last, even, odd, returns boolean values in ngFor -->
 
   <!-- using new syntax after angular 16 -->
-  @for (course of courses; track course.id;){
+  <!-- @for (course of courses; track course.id;){ -->
   <!-- similary we have $last, $first, $odd, $even properties  -->
   <!-- <course-card
     [course]="course"
@@ -26,7 +26,7 @@
     [class.is-odd]="$odd"
   /> -->
 
-  <course-card
+  <!-- <course-card
     [course]="course"
     [index]="index"
     [count]="count"
@@ -35,5 +35,10 @@
   />
   } @empty(){
   <p>no data found!</p>
-  }
+  } -->
+
+  <!-- @viewChild decorator to get reference of template inside model or typescript files -->
+   <course-card #cardRef [course]="courses[0]" (courseSelected)="onCourseSelected($event)"/>
+   <course-card #cardRef [course]="courses[1]" (courseSelected)="onCourseSelected($event)"/>
+
 </div>
